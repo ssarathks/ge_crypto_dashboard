@@ -122,18 +122,18 @@ class _TabbedLayoutScreenState extends State<TabbedLayoutScreen> {
       position: RelativeRect.fromLTRB(left, top, left + 1, top + 1),
       items: [
         PopupMenuItem<String>(
-          child: const Text("Account Settings"),
           value: 'account_settings',
           onTap: () {},
+          child: const Text("Account Settings"),
         ),
         PopupMenuItem<String>(
-            child: const Text("Logout"),
             value: 'logout',
             onTap: () {
               Future.delayed(const Duration(seconds: 0), () {
                 logoutHandler();
               });
-            }),
+            },
+            child: const Text("Logout")),
       ],
       elevation: 8.0,
     );
